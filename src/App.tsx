@@ -1,12 +1,15 @@
 import React from "react";
 import AppRoutes from "./routes/AppRoutes";
-import { CssBaseline } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
+import { LightTheme } from "./shared/themes/Light";
 
 function App() {
   return (
     <div className="App">
-      <CssBaseline />
-      <AppRoutes />
+      <ThemeProvider theme={LightTheme}>
+        {/* <CssBaseline /> */}
+        <AppRoutes />
+      </ThemeProvider>
     </div>
   );
 }

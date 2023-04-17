@@ -7,7 +7,14 @@ const AppRoutes: React.FC = () => {
     <React.Fragment>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Button>Teste</Button>} />
+          <Route
+            path="/"
+            element={
+              <Button variant="contained" color="primary">
+                Teste
+              </Button>
+            }
+          />
           {/* <Route path="/register" element={<Register />} />
           <Route path="/errandsList" element={<ListaRecados />} /> */}
           <Route path="*" element={<Navigate to={"/"} />} />
