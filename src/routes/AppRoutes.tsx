@@ -1,8 +1,11 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
+import { useAppThemeContext } from "../shared/contexts/ThemeContext";
 
-const AppRoutes: React.FC = () => {
+export const AppRoutes: React.FC = () => {
+  const { toggleTheme } = useAppThemeContext();
+
   return (
     <React.Fragment>
       <BrowserRouter>
@@ -10,8 +13,8 @@ const AppRoutes: React.FC = () => {
           <Route
             path="/"
             element={
-              <Button variant="contained" color="primary">
-                Teste
+              <Button onClick={toggleTheme} variant="contained" color="primary">
+                ToggleTheme
               </Button>
             }
           />
